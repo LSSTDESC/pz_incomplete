@@ -2,8 +2,8 @@ from ceci import PipelineStage
 from descformats import TextFile, FitsFile, HDFFile, YamlFile
 
 # This class represents one step in the pipeline
-class pz_incompleteStage1(PipelineStage):
-    name = "pz_incompleteStage1"
+class PZIncomplete(PipelineStage):
+    name = "PZIncomplete"
     #
     inputs = [
         ('config', YamlFile),
@@ -29,7 +29,7 @@ class pz_incompleteStage1(PipelineStage):
         input_file.close()
 
         # You would normally call some other function or method
-        # here to generate some output.  You can use self.comm, 
+        # here to generate some output.  You can use self.comm,
         # self.rank, and self.size to use MPI.
 
         output = f"""
@@ -43,5 +43,3 @@ Price of fish = £{fish}
         output_file = self.open_output('some_output_tag')
         output_file.write(output)
         output_file.close()
-
-
