@@ -1,6 +1,7 @@
 from ceci import PipelineStage
 from descformats import TextFile, FitsFile, HDFFile, YamlFile
 
+
 # This class represents one step in the pipeline
 class PZIncomplete(PipelineStage):
     name = "PZIncomplete"
